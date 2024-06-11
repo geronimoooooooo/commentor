@@ -11,6 +11,7 @@ function formComments(req, res){
     }
     const userName = req.body.userName;
     const comment = req.body.textAreaComment;
+    const time = new Date().toISOString();
     console.log("username: "+userName + " with comment: "+comment);
 
     console.log('this is form: '+ JSON.stringify(req.body));
@@ -19,7 +20,7 @@ function formComments(req, res){
     console.log(comments);
     
     
-    comments.push({username: userName, comment: comment});  
+    comments.push({username: userName, comment: comment, time});  
     res.render('comments-show', {
         name: "Bro",
         titlePage: "Show Comments",

@@ -10,14 +10,15 @@ app.use(express.json()); // for json
 app.use(express.urlencoded({ extended: true })); // for form data
 
 
-
+let showButton = true;
 // Define a basic route
 app.get('/', (req, res) => {
     // res.send('Hello, Express World!');  // Send a response
     res.render('index', {
         name: "Bro",
         titlePage: "Startpage",
-        header: "Homepage"
+        header: "Homepage",
+        showButton: showButton
     });
   });
 
