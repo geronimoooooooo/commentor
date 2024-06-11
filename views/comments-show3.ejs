@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head><%- include ('partials/head') %></head>
+<body class="container">      
+    <header><%- include ('partials/header') %></header>  
+    <main>    
+      <section>
+
+        <p class="pt-5">list of comments</p> 
+        <% comments.forEach((article)=> { %>
+        <div style="background-color: aqua;">
+            <p><%= article.username %></p>
+            <p><%= article.comment %></p>
+        </div>
+        <br>
+        <% }) %>
+
+
+      </section>        
+    </main>    
+  </body>
+</html>

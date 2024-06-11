@@ -5,9 +5,23 @@
     <header><%- include ('partials/header') %></header>  
     <main>    
       <section>
-        <p class="pt-5">list of comments</p> 
-      </section>
-        
-    </main>    
-  </body>
+    <ul>
+        <% comments.forEach((article)=> { %>
+            <li>
+                <h2>
+                    <%= article.username %>
+                </h2>
+                <p>
+                    <%= article.comment %>
+                </p>
+                <p>
+                    <%= new Date().toISOString() %>
+                </p>
+            </li>
+            <hr />
+        <% }) %>
+    </ul>
+</section>        
+</main>    
+</body>
 </html>
