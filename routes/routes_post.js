@@ -17,8 +17,7 @@ function formComments(req, res){
     console.log('this is form: '+ JSON.stringify(req.body));
     // res.send('this is form '+ JSON.stringify(req.body));
     
-    console.log(comments);
-    
+    console.log(comments);    
     
     comments.push({username: userName, comment: comment, time});  
     res.render('comments-show', {

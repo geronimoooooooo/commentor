@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head><%- include ('partials/head') %></head>
+
   <body class="container">      
-      <header><%- include ('partials/header') %></header>
+    <header><%- include ('partials/header') %></header>
     <h1>Hello <%= name %>!</h1>
-    
-    <form action="/comments-show" method="get">
-      <button type="submit">Show List</button>
-  </form>
-  <% if(showButton){ %> 
-    <button type="button">click</button>
-  <%}%>
+    <main>
+      <form action="/comments-show" method="get">
+        <button type="submit">Show List</button>
+      </form>
+      <% if(showButton){ %> 
+        <button type="button">click</button>
+      <%}%>
+    </main>
+    <footer><%- include('partials/footer') %></footer>
+
   </body>
 </html>
